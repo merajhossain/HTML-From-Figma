@@ -1,0 +1,117 @@
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+  --primary-color:#000000;
+}
+html,
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/***Layout Design Start***/
+.main-container-wrapper{
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 90px auto;
+}
+.menu-warpper{
+  width: 224px;
+  grid-row: 1 / -1;
+  background: var(--primary-color);
+}
+.header-warpper{
+  grid-column: 2 / -1;
+  background: var(--primary-color);
+}
+.content-warpper{
+  grid-column: 2 / -1;
+  overflow: auto;
+}
+/**toggle button start**/
+.toggleButton{
+  display: none;
+}
+.toggle {
+  cursor: pointer;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 7px 0 #000;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-toggle {
+  position: absolute;
+  display: block;
+  height: 3px;
+  background: #000;
+  border-radius: 5px;
+  transition: all .6s;
+}
+
+.line-toggle:first-child {
+  transform: translateY(-10px) ;
+  width: 35px;
+  transition-delay: 0s;
+}
+
+.toggle .line-toggle:nth-child(2) {
+  transform: translateY(0px);
+  width: 25px;
+}
+
+.toggle .line-toggle:nth-child(3) {
+  transform: translateY(10px);
+  width: 35px;
+}
+
+.line-toggle:last-child {
+  transform: translateY(10px) translateX(-22px);
+  width: 30px;
+  transition-delay: 0s;
+}
+/**toggle button end**/
+/***Layout Design End***/
+/***Layout Design Responsive Start***/
+@media screen and (max-width: 767px){
+  .mobile-screen .header-warpper{
+    grid-column: 1 / -1;
+  }
+  .mobile-screen .content-warpper{
+    grid-column: 1 / -1;
+  }
+  .mobile-screen .menu-warpper{
+    display: none;
+  }
+  .toggleButton{
+    display: flex;
+  }
+  .mobile-screen.sidebar-open .header-warpper{
+    grid-column: 2 / -1;
+  }
+  .mobile-screen.sidebar-open .content-warpper{
+    grid-column: 2 / -1;
+  }
+  .mobile-screen.sidebar-close .menu-warpper{
+    display: none;
+  }
+  .mobile-screen.sidebar-open .menu-warpper{
+    display: block;
+  }
+
+}
+/***Layout Design Responsive End***/

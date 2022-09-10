@@ -136,6 +136,7 @@ $coloOrrange: #FF7901;
                 border-top-right-radius: 0px;
                 padding-bottom: 20px;
                 background: #ffffff;
+                z-index: 1;
                 @media screen and (max-width:767px) {
                     right: 0;
                 }

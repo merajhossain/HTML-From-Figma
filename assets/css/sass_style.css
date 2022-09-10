@@ -17,6 +17,10 @@
           justify-content: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -435,7 +439,96 @@
 /**sidebar style end**/
 /***content wrapper start**/
 .content-warpper {
-  padding: 30px 30px 45px;
+  padding: 30px 15px 45px;
+}
+
+.flex-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-columns .columns {
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+.border {
+  border: 1px solid #F2F2F4;
+}
+
+.border-radius-10 {
+  border-radius: 10px;
+}
+
+.p-x-30 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.p-y-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.w-325 {
+  width: 325px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .w-325 {
+    width: 100%;
+  }
+}
+
+.w-f-325 {
+  width: calc(100% - 325px) !important;
+}
+
+@media screen and (max-width: 767px) {
+  .w-f-325 {
+    width: 100%;
+  }
+}
+
+.profile-details-wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.profile-details-wrapper .profile-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 38px;
+  color: #26262E;
+  margin-top: 15px;
+}
+
+.profile-details-wrapper .profile-details {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #7D7D7E;
+  margin-bottom: 5px;
+}
+
+.box-title h1 {
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: #26262E;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /***content wrapper end**/

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figma to HTML</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/sass_style.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body class="main-body">
     <!---Layout start-->
@@ -26,6 +26,7 @@
                         <span>Balance :</span>
                         <span class="currency-text">$125</span>
                     </div>
+                    <!--profile dropdown start-->
                     <div class="dropdown closed">
                         <div class="dropdown-title">
                             <div class="image">
@@ -44,7 +45,7 @@
                             <li><a href="#">API Documenttation</a></li>
                             <li><a href="#">Logout</a></li>  
                             <li>
-                                <button type="button" class="logoutBtn" alt="logoutBtn">
+                                <button type="button" class="logoutBtn">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="#7D7D7E" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11.25 3C11.25 2.80109 11.329 2.61032 11.4697 2.46967C11.6103 2.32902 11.8011 2.25 12 2.25L16 2.25C17.2593 2.25159 18.4666 2.75254 19.357 3.643C20.2475 4.53345 20.7484 5.74071 20.75 7L20.75 17C20.7484 18.2593 20.2475 19.4665 19.357 20.357C18.4665 21.2475 17.2593 21.7484 16 21.75L12 21.75C11.8011 21.75 11.6103 21.671 11.4697 21.5303C11.329 21.3897 11.25 21.1989 11.25 21C11.25 20.8011 11.329 20.6103 11.4697 20.4697C11.6103 20.329 11.8011 20.25 12 20.25L16 20.25C16.8616 20.2489 17.6877 19.9062 18.2969 19.2969C18.9062 18.6877 19.2489 17.8616 19.25 17L19.25 7C19.2489 6.13837 18.9062 5.31234 18.2969 4.70307C17.6877 4.09381 16.8616 3.75106 16 3.75L12 3.75C11.8011 3.75 11.6103 3.67098 11.4697 3.53033C11.329 3.38968 11.25 3.19891 11.25 3ZM3.47 12.53L7.47 16.53C7.53922 16.6016 7.622 16.6587 7.71353 16.698C7.80505 16.7372 7.90347 16.7579 8.00306 16.7587C8.10264 16.7595 8.20139 16.7405 8.29355 16.7027C8.3857 16.665 8.46941 16.6092 8.5398 16.5388C8.61018 16.4683 8.66583 16.3846 8.7035 16.2924C8.74117 16.2002 8.7601 16.1014 8.75919 16.0018C8.75827 15.9023 8.73754 15.8039 8.69819 15.7124C8.65884 15.6209 8.60167 15.5382 8.53 15.469L5.811 12.75L14 12.75C14.1989 12.75 14.3897 12.671 14.5303 12.5303C14.671 12.3897 14.75 12.1989 14.75 12C14.75 11.8011 14.671 11.6103 14.5303 11.4697C14.3897 11.329 14.1989 11.25 14 11.25L5.811 11.25L8.53 8.53C8.66669 8.38861 8.74237 8.1992 8.74076 8.00255C8.73914 7.8059 8.66036 7.61775 8.52136 7.47863C8.38237 7.33951 8.1943 7.26054 7.99765 7.25874C7.80101 7.25694 7.61152 7.33244 7.47 7.469L3.47 11.469C3.40031 11.5386 3.34502 11.6213 3.3073 11.7124C3.26958 11.8034 3.25016 11.901 3.25016 11.9995C3.25016 12.098 3.26958 12.1956 3.3073 12.2866C3.34502 12.3776 3.40031 12.4603 3.47 12.53Z" fill="#FF5E5E"/>
                                     </svg>
@@ -54,6 +55,7 @@
                         </ul>
                         
                     </div>
+                    <!--profile dropdown end-->
                 </div>
             </div>
         </div>
@@ -215,9 +217,10 @@
         <!---Menu part end-->
         <!---Content start-->
         <div class="content-warpper">
-            <div class="d-flex flex-columns">
+            <div class="d-flex flex-columns d-md-block">
+                <!--profile details start-->
                 <div class="columns w-325">
-                    <div class="border border-radius-10 p-x-30 p-y-40 profile-details-wrapper">
+                    <div class="border border-radius-10 p-x-15 p-y-40 profile-details-wrapper h-100 m-b-30">
                         <div class="d-flex justify-content-center">
                             <div class="text-center"> 
                                 <div class="profile-image-wrapper">
@@ -233,30 +236,85 @@
                         </div>
                     </div>
                 </div>
+                <!--profile details end-->
+                <!--credit card details start-->
                 <div class="columns w-f-325">
-                    <div class="border border-radius-10 p-x-30 p-y-40">
+                    <div class="border border-radius-10 p-x-30 p-y-40 h-100">
                         <div class="box-title">
                             <h1>Your Credit Cards</h1>
                         </div>
-                        <div class="d-flex align-items-center flex-columns">
-                            <div class="border border-radius-10 p-30 columns">
-eff
+                        <div class="m-t-10 d-md-block row">
+                            <!--credit card box start-->
+                            <div class="column-grid">
+                                <div class="border border-radius-10 p-30 credit-card-details-wrapper m-b-30">
+                                    <div class="credit-card-title" title="Credit Card 1">
+                                        Credit Card 1
+                                    </div>
+                                    <div class="credit-card-number m-t-30" title="xxxxxxxxxxxx4684">
+                                        xxxxxxxxxxxx4684
+                                    </div>
+                                    <button type="button" class="delete-button">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.725 1.1875C5.575 1.28125 5.5 1.42188 5.5 1.625C5.5 1.82812 5.575 1.96875 5.725 2.0625C5.825 2.12187 5.8875 2.125 8 2.125C10.1125 2.125 10.175 2.12187 10.275 2.0625C10.425 1.96875 10.5 1.82812 10.5 1.625C10.5 1.42188 10.425 1.28125 10.275 1.1875C10.175 1.12813 10.1125 1.125 8 1.125C5.8875 1.125 5.825 1.12813 5.725 1.1875Z" fill="#BDBDBD"/>
+                                            <path d="M2.225 2.68828C2.075 2.78203 2 2.92266 2 3.12578C2 3.32891 2.075 3.46953 2.225 3.56328C2.3125 3.61641 2.38438 3.62578 2.66563 3.62578H3V8.38516C3 13.6914 2.98438 13.2883 3.225 13.782C3.46875 14.282 3.97812 14.6852 4.54688 14.8289C4.825 14.9008 11.175 14.9008 11.4531 14.8289C12.0219 14.6852 12.5312 14.282 12.775 13.782C13.0156 13.2883 13 13.6914 13 8.38516V3.62578H13.3375C13.6156 3.62578 13.6875 3.61641 13.775 3.56328C13.925 3.46953 14 3.32891 14 3.12578C14 2.92266 13.925 2.78203 13.775 2.68828C13.6719 2.62578 13.6031 2.62578 8 2.62578C2.39687 2.62578 2.32812 2.62578 2.225 2.68828ZM11.9938 8.31953L11.9844 13.0164L11.9094 13.1977C11.8125 13.4414 11.5656 13.6883 11.3219 13.7852L11.1406 13.8602H8H4.85938L4.67813 13.7852C4.43438 13.6883 4.1875 13.4414 4.09063 13.1977L4.01562 13.0164L4.00625 8.31953L3.99688 3.62578H8H12.0031L11.9938 8.31953Z" fill="#BDBDBD"/>
+                                            <path d="M5.975 5.9375C5.91875 5.97187 5.84688 6.04375 5.8125 6.1C5.75313 6.2 5.75 6.2625 5.75 8.875C5.75 11.4875 5.75313 11.55 5.8125 11.65C5.90625 11.8 6.04688 11.875 6.25 11.875C6.45312 11.875 6.59375 11.8 6.6875 11.65C6.74687 11.55 6.75 11.4875 6.75 8.875C6.75 6.2625 6.74687 6.2 6.6875 6.1C6.59375 5.95 6.45312 5.875 6.25 5.875C6.13438 5.875 6.04375 5.89375 5.975 5.9375Z" fill="#BDBDBD"/>
+                                            <path d="M9.475 5.9375C9.41875 5.97187 9.34688 6.04375 9.3125 6.1C9.25313 6.2 9.25 6.2625 9.25 8.875C9.25 11.4875 9.25313 11.55 9.3125 11.65C9.40625 11.8 9.54688 11.875 9.75 11.875C9.95312 11.875 10.0938 11.8 10.1875 11.65C10.2469 11.55 10.25 11.4875 10.25 8.875C10.25 6.2625 10.2469 6.2 10.1875 6.1C10.0938 5.95 9.95312 5.875 9.75 5.875C9.63438 5.875 9.54375 5.89375 9.475 5.9375Z" fill="#BDBDBD"/>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="border border-radius-10 p-30 columns">
-wefwef
+                            <!--credit card box end-->
+                            <!--credit card box start-->
+                            <div class="column-grid">
+                                <div class="border border-radius-10 p-30 credit-card-details-wrapper m-b-30">
+                                    <div class="credit-card-title" title="Credit Card 2 (Default)">
+                                        Credit Card 2 (Default)
+                                    </div>
+                                    <div class="credit-card-number m-t-30" title="xxxxxxxxxxxx4242">
+                                        xxxxxxxxxxxx4242
+                                    </div>
+                                    <button type="button" class="delete-button">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.725 1.1875C5.575 1.28125 5.5 1.42188 5.5 1.625C5.5 1.82812 5.575 1.96875 5.725 2.0625C5.825 2.12187 5.8875 2.125 8 2.125C10.1125 2.125 10.175 2.12187 10.275 2.0625C10.425 1.96875 10.5 1.82812 10.5 1.625C10.5 1.42188 10.425 1.28125 10.275 1.1875C10.175 1.12813 10.1125 1.125 8 1.125C5.8875 1.125 5.825 1.12813 5.725 1.1875Z" fill="#BDBDBD"/>
+                                            <path d="M2.225 2.68828C2.075 2.78203 2 2.92266 2 3.12578C2 3.32891 2.075 3.46953 2.225 3.56328C2.3125 3.61641 2.38438 3.62578 2.66563 3.62578H3V8.38516C3 13.6914 2.98438 13.2883 3.225 13.782C3.46875 14.282 3.97812 14.6852 4.54688 14.8289C4.825 14.9008 11.175 14.9008 11.4531 14.8289C12.0219 14.6852 12.5312 14.282 12.775 13.782C13.0156 13.2883 13 13.6914 13 8.38516V3.62578H13.3375C13.6156 3.62578 13.6875 3.61641 13.775 3.56328C13.925 3.46953 14 3.32891 14 3.12578C14 2.92266 13.925 2.78203 13.775 2.68828C13.6719 2.62578 13.6031 2.62578 8 2.62578C2.39687 2.62578 2.32812 2.62578 2.225 2.68828ZM11.9938 8.31953L11.9844 13.0164L11.9094 13.1977C11.8125 13.4414 11.5656 13.6883 11.3219 13.7852L11.1406 13.8602H8H4.85938L4.67813 13.7852C4.43438 13.6883 4.1875 13.4414 4.09063 13.1977L4.01562 13.0164L4.00625 8.31953L3.99688 3.62578H8H12.0031L11.9938 8.31953Z" fill="#BDBDBD"/>
+                                            <path d="M5.975 5.9375C5.91875 5.97187 5.84688 6.04375 5.8125 6.1C5.75313 6.2 5.75 6.2625 5.75 8.875C5.75 11.4875 5.75313 11.55 5.8125 11.65C5.90625 11.8 6.04688 11.875 6.25 11.875C6.45312 11.875 6.59375 11.8 6.6875 11.65C6.74687 11.55 6.75 11.4875 6.75 8.875C6.75 6.2625 6.74687 6.2 6.6875 6.1C6.59375 5.95 6.45312 5.875 6.25 5.875C6.13438 5.875 6.04375 5.89375 5.975 5.9375Z" fill="#BDBDBD"/>
+                                            <path d="M9.475 5.9375C9.41875 5.97187 9.34688 6.04375 9.3125 6.1C9.25313 6.2 9.25 6.2625 9.25 8.875C9.25 11.4875 9.25313 11.55 9.3125 11.65C9.40625 11.8 9.54688 11.875 9.75 11.875C9.95312 11.875 10.0938 11.8 10.1875 11.65C10.2469 11.55 10.25 11.4875 10.25 8.875C10.25 6.2625 10.2469 6.2 10.1875 6.1C10.0938 5.95 9.95312 5.875 9.75 5.875C9.63438 5.875 9.54375 5.89375 9.475 5.9375Z" fill="#BDBDBD"/>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="border border-radius-10 p-30 columns">
-wefgrgr
+                            <!--credit card box end-->
+                            <!--credit card box start-->
+                            <div class="column-grid">
+                                <div class="border border-radius-10 p-30 credit-card-details-wrapper m-b-30">
+                                    <div class="credit-card-title" title="Credit Card 3">
+                                        Credit Card 3
+                                    </div>
+                                    <div class="credit-card-number m-t-30" title="xxxxxxxxxxxx1254">
+                                        xxxxxxxxxxxx1254
+                                    </div>
+                                    <button type="button" class="delete-button">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.725 1.1875C5.575 1.28125 5.5 1.42188 5.5 1.625C5.5 1.82812 5.575 1.96875 5.725 2.0625C5.825 2.12187 5.8875 2.125 8 2.125C10.1125 2.125 10.175 2.12187 10.275 2.0625C10.425 1.96875 10.5 1.82812 10.5 1.625C10.5 1.42188 10.425 1.28125 10.275 1.1875C10.175 1.12813 10.1125 1.125 8 1.125C5.8875 1.125 5.825 1.12813 5.725 1.1875Z" fill="#BDBDBD"/>
+                                            <path d="M2.225 2.68828C2.075 2.78203 2 2.92266 2 3.12578C2 3.32891 2.075 3.46953 2.225 3.56328C2.3125 3.61641 2.38438 3.62578 2.66563 3.62578H3V8.38516C3 13.6914 2.98438 13.2883 3.225 13.782C3.46875 14.282 3.97812 14.6852 4.54688 14.8289C4.825 14.9008 11.175 14.9008 11.4531 14.8289C12.0219 14.6852 12.5312 14.282 12.775 13.782C13.0156 13.2883 13 13.6914 13 8.38516V3.62578H13.3375C13.6156 3.62578 13.6875 3.61641 13.775 3.56328C13.925 3.46953 14 3.32891 14 3.12578C14 2.92266 13.925 2.78203 13.775 2.68828C13.6719 2.62578 13.6031 2.62578 8 2.62578C2.39687 2.62578 2.32812 2.62578 2.225 2.68828ZM11.9938 8.31953L11.9844 13.0164L11.9094 13.1977C11.8125 13.4414 11.5656 13.6883 11.3219 13.7852L11.1406 13.8602H8H4.85938L4.67813 13.7852C4.43438 13.6883 4.1875 13.4414 4.09063 13.1977L4.01562 13.0164L4.00625 8.31953L3.99688 3.62578H8H12.0031L11.9938 8.31953Z" fill="#BDBDBD"/>
+                                            <path d="M5.975 5.9375C5.91875 5.97187 5.84688 6.04375 5.8125 6.1C5.75313 6.2 5.75 6.2625 5.75 8.875C5.75 11.4875 5.75313 11.55 5.8125 11.65C5.90625 11.8 6.04688 11.875 6.25 11.875C6.45312 11.875 6.59375 11.8 6.6875 11.65C6.74687 11.55 6.75 11.4875 6.75 8.875C6.75 6.2625 6.74687 6.2 6.6875 6.1C6.59375 5.95 6.45312 5.875 6.25 5.875C6.13438 5.875 6.04375 5.89375 5.975 5.9375Z" fill="#BDBDBD"/>
+                                            <path d="M9.475 5.9375C9.41875 5.97187 9.34688 6.04375 9.3125 6.1C9.25313 6.2 9.25 6.2625 9.25 8.875C9.25 11.4875 9.25313 11.55 9.3125 11.65C9.40625 11.8 9.54688 11.875 9.75 11.875C9.95312 11.875 10.0938 11.8 10.1875 11.65C10.2469 11.55 10.25 11.4875 10.25 8.875C10.25 6.2625 10.2469 6.2 10.1875 6.1C10.0938 5.95 9.95312 5.875 9.75 5.875C9.63438 5.875 9.54375 5.89375 9.475 5.9375Z" fill="#BDBDBD"/>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
+                            <!--credit card box end-->
                         </div>
                     </div>
                 </div>
+                <!--credit card details end-->
             </div>
         </div>
         <!---Content end-->
     </div>
     <!---Layout end-->
     <script type="text/javascript">
+        //dropdown start
         let dropdown = document.querySelector('.dropdown');
         let dropdownTitle = document.querySelector('.dropdown-title');
         let dropdownContent = document.querySelector('.dropdown-content');
@@ -269,7 +327,8 @@ wefgrgr
                 dropdownContent.classList.add('show')
             }
         });
-
+        //dropdown end
+        //submenu start
         let listElement = document.querySelector('.menu-list').children;
         let submenuTitle = document.querySelector('.submenu-title');
         submenuTitle.addEventListener('click', (e) => {
@@ -279,7 +338,8 @@ wefgrgr
                 submenuTitle.parentElement.classList.add('open')
             }
         });
-        
+        //submenu end
+        //window resize start
         function mobileScreenLayoutChange(fullBodyWrapper) {
             if (fullBodyWrapper.offsetWidth < 768) {
                 fullBodyWrapper.classList.add('mobile-screen');
@@ -295,7 +355,8 @@ wefgrgr
         window.addEventListener('resize', function(event) {
             mobileScreenLayoutChange(fullBodyWrapper);
         }, true);
-
+        //window resize end
+        //toggle button start
         let toggleButton = document.querySelector('.toggleButton');
         toggleButton.addEventListener('click', (e) => {
             let fullBodyWrapper = document.querySelector('.main-body');
@@ -307,6 +368,7 @@ wefgrgr
                 fullBodyWrapper.classList.add('sidebar-close');
             }
         });
+        //toggle button end
     </script>
 </body>
 </html>

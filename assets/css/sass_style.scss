@@ -1,11 +1,11 @@
 $colorWhite: #fff;
 $colorBlack: #26262E;
 $coloOrrange: #FF7901;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .d-flex{
     display: flex;
 }
+
 .align-items-center{
     align-items: center;
 }
@@ -14,6 +14,23 @@ $coloOrrange: #FF7901;
 }
 .text-center{
  text-align: center;   
+}
+.m-t-10{
+    margin-top: 10px;
+}
+.m-t-30{
+    margin-top: 30px;
+}
+.m-b-30{
+    margin-bottom: 30px;
+}
+.h-100{
+    height: 100%;
+}
+.text-white-space{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .btn{
     display: inline-block;
@@ -118,6 +135,7 @@ $coloOrrange: #FF7901;
                 border-top-left-radius: 0px;
                 border-top-right-radius: 0px;
                 padding-bottom: 20px;
+                background: #ffffff;
                 @media screen and (max-width:767px) {
                     right: 0;
                 }
@@ -336,19 +354,33 @@ $coloOrrange: #FF7901;
 /**sidebar style end**/
 /***content wrapper start**/
 .content-warpper{
-    padding: 30px 15px 45px;
+    padding: 30px 30px 45px;
 }
 .flex-columns{
     display: flex;
     .columns{
-        padding: 0 15px;
         box-sizing: border-box;
         width: 100% ;
-
+    }
+}
+.row{
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    .column-grid{
+        padding-left: 15px;
+        padding-right: 15px;
+        // width: 387px;
+        // display: inline-block;
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
     }
 }
 .border{
     border: 1px solid #F2F2F4;
+    box-sizing: border-box;
 }
 .border-radius-10{
  border-radius: 10px;   
@@ -361,17 +393,23 @@ $coloOrrange: #FF7901;
     padding-top: 40px;
     padding-bottom: 40px;
 }
+.p-y-40{
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
 .p-30{
     padding: 30px;
 }
 .w-325{
     width: 325px !important;
+    margin-right: 30px;
     @media screen and (max-width: 767px){
         width: 100%;
+        margin-right: 0 !important;
     }
 }
 .w-f-325{
-    width: calc(100% - 325px) !important;
+    width: calc(100% - 355px) !important;
     @media screen and (max-width: 767px){
         width: 100%;
     }
@@ -387,6 +425,7 @@ $coloOrrange: #FF7901;
         line-height: 38px;
         color: #26262E;
         margin-top: 15px;
+        @extend .text-white-space
     }
     .profile-details{
         font-family: 'Poppins';
@@ -396,6 +435,7 @@ $coloOrrange: #FF7901;
         line-height: 20px;
         color: #7D7D7E;
         margin-bottom: 5px;
+        @extend .text-white-space
     }
 }
 .box-title{
@@ -407,6 +447,78 @@ $coloOrrange: #FF7901;
         line-height: 30px;
         color: #26262E;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        @extend .text-white-space
+    }
+}
+.credit-card-details-wrapper{
+    position: relative;
+    // min-width: 387px;
+    .credit-card-title{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        color: #7D7D7E;
+        @extend .text-white-space
+    }
+    .credit-card-number{
+        
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        color: #BDBDBD;
+        @extend .text-white-space
+    }
+    .delete-button{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 10px;
+        top: 10px;
+        background: #F2F2F4;
+        border-radius: 40px;
+        border: none;
+        cursor: pointer;
+    }
+    &:hover{
+        cursor: pointer;
+        &.border{
+            border: 1px solid #FF7901;
+        }
+        .credit-card-title{
+            color: #26262E;
+            
+        }
+        .credit-card-number{
+            color: #26262E;
+            
+        }
+        .delete-button{
+            background: #FFD7D7;
+            path{
+                fill: #FF4242;
+            }
+        }
+    }
+}
+@media screen and (max-width:992px) {
+    .d-md-block{
+        display: block !important;
+    }
+    .w-325{
+        width: 100% !important;
+    }
+    .w-f-325{
+        width: 100% !important;
+    }
+    .d-md-flex-wrap{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:767px) {
+    .d-sm-block{
+        display: block !important;
     }
 }
 /***content wrapper end**/
